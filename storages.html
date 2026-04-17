@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storages</title>
+</head>
+<body>
+    <script>
+        let data_2 ={
+            "storages": [
+                {
+                    "id": 1,
+                    "name": "Storage A",
+                    "capacity": 1000,
+                    "location": "Location A"
+                },
+                {
+                    "id": 2,
+                    "name": "Storage B",
+                    "capacity": 2000,
+                    "location": "Location B"
+                },
+                {
+                    "id": 3,
+                    "name": "Storage C",
+                    "capacity": 1500,
+                    "location": "Location C"
+                }
+            ]
+        
+        }
+        console.log(typeof (data_2));
+        let store_2=sessionStorage.setItem("storage",JSON.stringify(data_2));
+        console.log(store_2);
+        let result=sessionStorage.getItem("storage");   
+        console.log(result);
+        let parsedResult=JSON.parse(result);
+        console.log(parsedResult);
+        const parsedData=JSON.parse(result);
+        console.log(parsedData);
+        console.log(parsedData.storages);
+        console.log(parsedData.storages[0]);
+        
+
+    </script>
+    
+</body>
+</html>

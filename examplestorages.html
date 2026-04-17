@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storage examples</title>
+</head>
+<body>
+    <input type="text" id="inputData" placeholder="Enter some data">
+    <button onclick="saveData()">Save to Local Storage</button>
+    <button onclick="saveToSession()">Save to Session Storage</button>
+    <button onclick="saveToCookies()">Save to Cookies</button>      
+
+    <script>
+       let input =document.getElementById("inputData");
+       function saveData(){
+        let value =document.getElementById("inputData").value;
+        function local(){
+            localStorage.setItem("myData",value);
+        }
+
+       }
+       function saveToSession(){
+        sessionStorage.setItem("mySessionData",input.value);
+
+       
+       }
+         function cookies(){
+            document.cookie = `myCookieData=${input.value}; path=/;
+            
+
+    
+         }
+    </script>
+
+</body>
+</html>
